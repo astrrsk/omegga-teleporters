@@ -1,0 +1,20 @@
+{
+  "name": "teleporters",
+  "description": "Allows for the creation of teleporters",
+  "author": "astrsk",
+  "config": {},
+  "commands": [
+    {
+      "name": "createtp",
+      "description": "Creates an interactable brick that teleports the clicker to your current location",
+      "example": "/createtp",
+      "args": []
+    },
+    {
+     "name": "pos",
+     "description": "Prints your position",
+     "example": "/pos",
+     "args": [] 
+    }
+  ]
+}
