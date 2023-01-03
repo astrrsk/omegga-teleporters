@@ -9,12 +9,6 @@
       "description": "Creates an interactable brick that teleports the clicker to your current location",
       "example": "/createtp",
       "args": []
-    },
-    {
-     "name": "pos",
-     "description": "Prints your position",
-     "example": "/pos",
-     "args": [] 
     }
   ]
 }
