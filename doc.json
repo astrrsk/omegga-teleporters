@@ -2,7 +2,13 @@
   "name": "teleporters",
   "description": "Allows for the creation of teleporters",
   "author": "astrsk",
-  "config": {},
+  "config": {
+    "allowedRole": {
+      "description": "Which role is allowed to run the /createtp command",
+      "default": "Admin",
+      "type": "string"
+    }
+  },
   "commands": [
     {
       "name": "createtp",

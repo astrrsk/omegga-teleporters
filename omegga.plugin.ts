@@ -1,6 +1,6 @@
 import OmeggaPlugin, { OL, PS, PC, WriteSaveObject, OmeggaPlayer } from 'omegga';
 
-type Config = { foo: string };
+type Config = { allowedRole: string };
 type Storage = { bar: string };
 
 export default class Plugin implements OmeggaPlugin<Config, Storage> {
@@ -107,8 +107,8 @@ export default class Plugin implements OmeggaPlugin<Config, Storage> {
     this.omegga.on('cmd:createtp', async (speaker: string) => {
       const player = this.omegga.getPlayer(speaker);
       if (!player) { return; }
-      if (!player.getRoles().includes("Admin")) {
-        this.omegga.whisper(speaker, "You do not have permission to run this command.");
+      if (!player.getRoles().includes(this.config.allowedRole)) {
+        this.omegga.whisper(speaker, 'You do not have permission to run this command.');
         return;
       }
       const position = await player.getPosition();
