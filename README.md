@@ -20,7 +20,7 @@ remove it entirely if it is unnecessary.
 
 ## Install
 
-`omegga install gh:astrsk/teleporters`
+`omegga install gh:astrrsk/teleporters`
 
 _TODO: more steps...?_
 
