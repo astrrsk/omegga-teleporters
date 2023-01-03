@@ -107,7 +107,7 @@ export default class Plugin implements OmeggaPlugin<Config, Storage> {
     this.omegga.on('cmd:createtp', async (speaker: string) => {
       const player = this.omegga.getPlayer(speaker);
       if (!player) { return; }
-      if (!player.getRoles().includes(this.config.allowedRole)) {
+      if (!player.getRoles().includes(this.config.allowedRole) && !player.isHost()) {
         this.omegga.whisper(speaker, 'You do not have permission to run this command.');
         return;
       }
